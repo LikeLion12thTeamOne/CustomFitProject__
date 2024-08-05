@@ -91,6 +91,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
+    "http://3.35.92.28:8000"
 ]
 
 
@@ -119,7 +120,7 @@ CORS_ALLOW_HEADERS = [
 CSRF_COOKIE_NAME = 'csrftoken'
 #CSRF_COOKIE_NAME = 'XSRF-TOKEN'
 #CSRF_HEADER_NAME = 'X-XSRF-TOKEN'
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://127.0.0.1:8000', "http://3.35.92.28:8000"]
 
 
 #SESSION_COOKIE_SECURE=True
