@@ -25,7 +25,7 @@ const Changeinfo4 = () => {
       }
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/myPage/profile/",
+        "http://3.35.92.28:8000/myPage/profile/",
         {
           headers: {
             Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
@@ -59,7 +59,7 @@ const Changeinfo4 = () => {
       console.log("업데이트할 키 범위:", heightRange); // 디버그 로그 추가
 
       const response = await axios.put(
-        "http://127.0.0.1:8000/api/myPage/update/height/",
+        "http://3.35.92.28:8000/myPage/update/height/",
         { height: heightRange }, // height를 문자열로 전달
         {
           headers: {

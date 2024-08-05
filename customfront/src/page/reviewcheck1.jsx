@@ -17,7 +17,7 @@ const Reviewcheck1 = () => {
     try {
       const token = localStorage.getItem("token"); // 로그인 후 저장된 토큰을 가져옵니다.
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/myPage/profile/",
+        "http://3.35.92.28:8000/myPage/profile/",
         {
           headers: {
             Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
@@ -45,7 +45,7 @@ const Reviewcheck1 = () => {
       };
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/myPage/recommended-products/",
+        "http://3.35.92.28:8000/myPage/recommended-products/",
         config
       );
 

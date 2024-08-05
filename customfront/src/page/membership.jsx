@@ -83,7 +83,7 @@ const Membership = () => {
       const body = JSON.stringify(formData);
 
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/register/step1/",
+        "http://3.35.92.28:8000/register/step1/",
         body,
         config
       );

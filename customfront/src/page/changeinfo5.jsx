@@ -25,7 +25,7 @@ const Changeinfo5 = () => {
       }
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/myPage/profile/",
+        "http://3.35.92.28:8000/myPage/profile/",
         {
           headers: {
             Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
@@ -57,7 +57,7 @@ const Changeinfo5 = () => {
       }
 
       const response = await axios.put(
-        "http://127.0.0.1:8000/api/myPage/update/weight/", // API 엔드포인트
+        "http://3.35.92.28:8000/myPage/update/weight/", // API 엔드포인트
         { weight: weightRange }, // 요청 데이터
         {
           headers: {

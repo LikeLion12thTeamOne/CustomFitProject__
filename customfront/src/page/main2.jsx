@@ -50,7 +50,7 @@ const Main2 = () => {
       }
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/myPage/profile/",
+        "http://3.35.92.28:8000/myPage/profile/",
         {
           headers: {
             Authorization: `Token ${token}`,
@@ -101,7 +101,7 @@ const Main2 = () => {
   const [cartError, setCartError] = useState(null);
 
   const axiosInstance = axios.create({
-    baseURL: "http://127.0.0.1:8000/api/",
+    baseURL: "http://3.35.92.28:8000/",
     headers: {
       Authorization: `Token ${localStorage.getItem("token")}`,
       "Content-Type": "application/json",

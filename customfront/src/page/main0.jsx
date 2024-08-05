@@ -57,7 +57,7 @@ const Main0 = () => {
       }
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/myPage/profile/",
+        "http://3.35.92.28:8000/myPage/profile/",
         {
           headers: {
             Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.

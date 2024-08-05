@@ -28,7 +28,7 @@ const Reviewcheck3 = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/myPage/profile/",
+        "http://3.35.92.28:8000/myPage/profile/",
         {
           headers: { Authorization: `Token ${token}` },
         }
@@ -82,7 +82,7 @@ const Reviewcheck3 = () => {
       };
 
       await axios.patch(
-        `http://127.0.0.1:8000/api/myPage/recommended-products/${product.id}/edit/`,
+        `http://3.35.92.28:8000/myPage/recommended-products/${product.id}/edit/`,
         body,
         config
       );

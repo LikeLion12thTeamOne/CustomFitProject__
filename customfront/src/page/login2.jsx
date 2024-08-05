@@ -38,7 +38,7 @@ const Login2 = () => {
       const body = JSON.stringify({ username, password });
 
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/rest-auth/login/",
+        "http://3.35.92.28:8000/rest-auth/login/",
         body,
         config
       );
