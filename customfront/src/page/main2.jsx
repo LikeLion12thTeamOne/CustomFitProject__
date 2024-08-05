@@ -49,15 +49,12 @@ const Main2 = () => {
         throw new Error("로그인 토큰이 없습니다.");
       }
 
-      const response = await axios.get(
-        "http://3.35.92.28:8000/myPage/profile/",
-        {
-          headers: {
-            Authorization: `Token ${token}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.get("3.35.92.28:8000/myPage/profile/", {
+        headers: {
+          Authorization: `Token ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
 
       console.log("서버 응답:", response);
 
@@ -101,7 +98,7 @@ const Main2 = () => {
   const [cartError, setCartError] = useState(null);
 
   const axiosInstance = axios.create({
-    baseURL: "http://3.35.92.28:8000/",
+    baseURL: "3.35.92.28:8000/",
     headers: {
       Authorization: `Token ${localStorage.getItem("token")}`,
       "Content-Type": "application/json",

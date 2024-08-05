@@ -27,12 +27,9 @@ const Reviewcheck3 = () => {
   const fetchUserInfo = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(
-        "http://3.35.92.28:8000/myPage/profile/",
-        {
-          headers: { Authorization: `Token ${token}` },
-        }
-      );
+      const response = await axios.get("3.35.92.28:8000/myPage/profile/", {
+        headers: { Authorization: `Token ${token}` },
+      });
       setUserInfo(response.data);
     } catch (error) {
       console.error("Error fetching user info:", error);
@@ -82,7 +79,7 @@ const Reviewcheck3 = () => {
       };
 
       await axios.patch(
-        `http://3.35.92.28:8000/myPage/recommended-products/${product.id}/edit/`,
+        `3.35.92.28:8000/myPage/recommended-products/${product.id}/edit/`,
         body,
         config
       );

@@ -67,15 +67,12 @@ const Main3 = () => {
         throw new Error("로그인 토큰이 없습니다.");
       }
 
-      const response = await axios.get(
-        "http://3.35.92.28:8000/myPage/profile/",
-        {
-          headers: {
-            Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.get("3.35.92.28:8000/myPage/profile/", {
+        headers: {
+          Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
+          "Content-Type": "application/json",
+        },
+      });
 
       if (response.headers["content-type"].includes("application/json")) {
         console.log("사용자 정보:", response.data);
