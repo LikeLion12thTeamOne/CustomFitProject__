@@ -217,3 +217,11 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # 기본 발신자 이메일
 #공지에서 이미지 확인 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# http 설정
+SECURE_SSL_REDIRECT=False
+SESSION_COOKIE_SECURE=False
+CSRF_COOKIE_SECURE=False
+
+PROTOCOL = 'http'
