@@ -56,11 +56,14 @@ const Main0 = () => {
         throw new Error("로그인 토큰이 없습니다.");
       }
 
-      const response = await axios.get("http://3.35.92.28/myPage/profile/", {
-        headers: {
-          Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
-        },
-      });
+      const response = await axios.get(
+        "http://3.35.92.28/api/myPage/profile/",
+        {
+          headers: {
+            Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
+          },
+        }
+      );
 
       console.log("사용자 정보:", response.data); // 디버그 로그 추가
       setUserInfo(response.data);
