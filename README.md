@@ -33,58 +33,48 @@
 
 # 4. 폴더 구조
 all_project<br/>
-└─ House Talk Project<br/>
-├─ HouseTalk<br/>
+└─ CustomFitProject<br/>
+├─ CustomFitProject<br/>
 │  ├─ init.py<br/>
 │  ├─ asgi.py<br/>
-│  ├─ manage,py<br/>
 │  ├─ settings.py<br/>
 │  ├─ urls.py<br/>
 │  └─ wsgi.py<br/>
 ├─ accounts/<br/>
 │  ├─ pycache/<br/>
 │  ├─ migrations/<br/>
-│  ├─ templates/<br/>
 │  ├─ init.py<br/>
 │  ├─ admin.py<br/>
 │  ├─ apps.py<br/>
-│  ├─ forms.py<br/>
 │  ├─ models.py<br/>
+│  ├─ permissions.py<br/>
+│  ├─ serializers.py<br/>
 │  ├─ tests.py<br/>
 │  ├─ urls.py<br/>
 │  └─ views.py<br/>
-├─ board/<br/>
+├─ customFit/<br/>
 │  ├─ pycache/<br/>
 │  ├─ migrations/<br/>
-│  ├─ templates/<br/>
+│  ├─ management/<br/>
 │  ├─ init.py<br/>
 │  ├─ admin.py<br/>
 │  ├─ apps.py<br/>
-│  ├─ forms.py<br/>
+│  ├─ db_uploader.py<br/>
 │  ├─ models.py<br/>
+│  ├─ ProductDB<br/>
 │  ├─ tests.py<br/>
 │  ├─ urls.py<br/>
 │  └─ views.py<br/>
-├─ study/<br/>
+├─ frontend/<br/>
 │  ├─ pycache/<br/>
-│  ├─ migrations/<br/>
-│  ├─ templates/<br/>
-│  ├─ init.py<br/>
-│  ├─ admin.py<br/>
-│  ├─ apps.py<br/>
-│  ├─ forms.py<br/>
-│  ├─ models.py<br/>
-│  ├─ tests.py<br/>
-│  ├─ urls.py<br/>
+│  ├─ build/<br/>
 │  └─ views.py<br/>
-├─ mypage/<br/>
+├─ myPage/<br/>
 │  ├─ pycache/<br/>
 │  ├─ migrations/<br/>
-│  ├─ templates/<br/>
 │  ├─ init.py<br/>
 │  ├─ admin.py<br/>
 │  ├─ apps.py<br/>
-│  ├─ forms.py<br/>
 │  ├─ models.py<br/>
 │  ├─ tests.py<br/>
 │  ├─ urls.py<br/>
@@ -92,7 +82,21 @@ all_project<br/>
 ├─ static/<br/>
 │  ├─ css/<br/>
 │  ├─ iamge/<br/> 
-└─ manage.py<br/>
+│ manage.py<br/>
+├─ myPage/<br/>
+│  ├─ pycache/<br/>
+│  ├─ migrations/<br/>
+│  ├─ init.py<br/>
+│  ├─ admin.py<br/>
+│  ├─ apps.py<br/>
+│  ├─ models.py<br/>
+│  ├─ tests.py<br/>
+│  ├─ urls.py<br/>
+│  └─ views.py<br/>
+├─ customfront/<br/>
+│  ├─ public/<br/>
+│  ├─ src/<br/>
+
 
 
 
