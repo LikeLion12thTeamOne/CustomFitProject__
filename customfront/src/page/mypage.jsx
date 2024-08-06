@@ -56,14 +56,11 @@ const Mypage = () => {
   const fetchUserInfo = async () => {
     try {
       const token = localStorage.getItem("token"); // 로그인 후 저장된 토큰을 가져옵니다.
-      const response = await axios.get(
-        "http://3.35.92.28:8000/myPage/profile/",
-        {
-          headers: {
-            Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
-          },
-        }
-      );
+      const response = await axios.get("http://3.35.92.28/myPage/profile/", {
+        headers: {
+          Authorization: `Token ${token}`, // Authorization 헤더에 토큰을 포함합니다.
+        },
+      });
       setUserInfo(response.data);
     } catch (error) {
       console.error("Error fetching user info:", error);

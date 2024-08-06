@@ -20,7 +20,7 @@ SECRET_KEY = get_secret("SECRET_KEY")
 
 
 # 디버깅모드 : 배포시에는 False
-DEBUG = True
+DEBUG = False
 
 
 # 허용된 호스트 : 접속을 허용할 호스트들(도메인)을 이 곳에 등록
@@ -64,8 +64,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 SITE_ID = 1
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-
+    'corsheaders.middleware.CorsMiddleware', ## 이거 추가!! 위치 중요!!!
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -73,6 +72,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', ## 이거 추가!!
 
     # 추가
     'allauth.account.middleware.AccountMiddleware', 
@@ -88,9 +88,8 @@ REST_FRAMEWORK = {
 
 # CORS 설정
 CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:8000",
     "http://3.35.92.28:8000"
 ]
 
@@ -120,11 +119,11 @@ CORS_ALLOW_HEADERS = [
 CSRF_COOKIE_NAME = 'csrftoken'
 #CSRF_COOKIE_NAME = 'XSRF-TOKEN'
 #CSRF_HEADER_NAME = 'X-XSRF-TOKEN'
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://127.0.0.1:8000', "http://3.35.92.28:8000"]
+CSRF_TRUSTED_ORIGINS = ["http://3.35.92.28:8000"]
 
 
-#SESSION_COOKIE_SECURE=True
-#CSRF_COOKIE_SECURE=True
+SESSION_COOKIE_SECURE=True
+CSRF_COOKIE_SECURE=True
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
